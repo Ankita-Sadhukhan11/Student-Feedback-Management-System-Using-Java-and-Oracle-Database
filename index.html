@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Feedback System</title>
+</head>
+<body>
+
+<h2>Student Feedback Form</h2>
+
+<form action="feedback" method="post">
+
+    UID:
+    <input type="text" name="uid" required>
+    <br><br>
+
+    Name:
+    <input type="text" name="name" required>
+    <br><br>
+
+    Email:
+    <input type="email" name="email" required>
+    <br><br>
+
+    Category:
+    <select name="category">
+        <option>Teaching</option>
+        <option>Lab</option>
+        <option>Wi-Fi</option>
+        <option>Library</option>
+    </select>
+    <br><br>
+
+    Rating:
+    <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br><br>
+
+    Feedback:
+    <textarea name="comments" required></textarea>
+    <br><br>
+
+    <input type="hidden" name="action" value="insert">
+
+    <input type="submit" value="Submit Feedback">
+
+</form>
+
+<br>
+
+<a href="feedback?action=view">View All Feedback</a>
+
+</body>
+</html>
